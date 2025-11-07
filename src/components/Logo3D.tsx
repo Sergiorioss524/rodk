@@ -41,15 +41,6 @@ const ChromaKeyMaterial = shaderMaterial(
 // Extend the Three.js namespace with our custom material
 extend({ ChromaKeyMaterial });
 
-// Declare the custom material type for TypeScript
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      chromaKeyMaterial: any;
-    }
-  }
-}
-
 function VideoPlane({ src }: { src: string }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const materialRef = useRef<any>(null);
@@ -80,6 +71,7 @@ function VideoPlane({ src }: { src: string }) {
     >
       <mesh ref={meshRef}>
         <planeGeometry args={[6, 9.5]} />
+        {/* @ts-ignore - Custom shader material */}
         <chromaKeyMaterial
           ref={materialRef}
           transparent
