@@ -10,6 +10,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand Color Palette */
+  --color-primary-dark: #231F20;
+  --color-primary-white: #FFFFFF;
+  --color-secondary-beige: #F7ECE2;
+  --color-accent-red: #B8322D;
+  --color-accent-gray: #9C9B9B;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +30,33 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Cursor */
+* {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(184, 50, 45, 0.6);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #B8322D;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
 }
