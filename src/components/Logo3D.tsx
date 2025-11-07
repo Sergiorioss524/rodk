@@ -38,7 +38,17 @@ const ChromaKeyMaterial = shaderMaterial(
   `
 );
 
+// Extend the Three.js namespace with our custom material
 extend({ ChromaKeyMaterial });
+
+// Declare the custom material type for TypeScript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      chromaKeyMaterial: any;
+    }
+  }
+}
 
 function VideoPlane({ src }: { src: string }) {
   const meshRef = useRef<THREE.Mesh>(null);
