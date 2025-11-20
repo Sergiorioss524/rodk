@@ -26,34 +26,6 @@ export default function Navbar({ menuTrigger }: NavbarProps) {
         />
       </div>
 
-      {/* Center Section - Navigation Links */}
-      <div className="hidden md:flex justify-center flex-1 space-x-10">
-        <Link
-          href="#inicio"
-          className="text-sm font-bold uppercase tracking-wide hover:border-b-2 border-primary-white/70 transition-all pb-1"
-        >
-          Inicio
-        </Link>
-        <Link
-          href="#que-somos"
-          className="text-sm font-bold uppercase tracking-wide hover:border-b-2 border-primary-white/70 transition-all pb-1"
-        >
-          ¿Qué somos?
-        </Link>
-        <Link
-          href="#macrozonas"
-          className="text-sm font-bold uppercase tracking-wide hover:border-b-2 border-primary-white/70 transition-all pb-1"
-        >
-          Macrozonas
-        </Link>
-        <Link
-          href="#socios"
-          className="text-sm font-bold uppercase tracking-wide hover:border-b-2 border-primary-white/70 transition-all pb-1"
-        >
-          Socios
-        </Link>
-      </div>
-
       {/* Right Section - Hamburger Menu */}
       {menuTrigger ?? (
         <button

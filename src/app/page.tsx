@@ -64,7 +64,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <button className="rounded-full bg-primary-white px-6 py-2 text-xs font-black uppercase tracking-[0.28em] text-accent-red shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-[1.04] active:scale-[0.97]">
+            <button className="rounded-full bg-primary-white px-6 py-2 text-md font-bold uppercase tracking-[-0.045em] text-accent-red shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-[1.04] active:scale-[0.97]">
               Manual de Marca
             </button>
           </div>
@@ -77,13 +77,10 @@ export default function Home() {
             {downloads.map(item => (
               <button
                 key={item.label}
-                className="w-full rounded-2xl border border-white/15 bg-white/5 px-6 py-5 text-left transition hover:bg-white/10"
+                className="w-full rounded-2xl border border-white/15 bg-white/5 px-6 py-5 text-center transition hover:bg-white/10"
               >
-                <div className="space-y-1.5">
-                  <div className="text-sm font-semibold uppercase tracking-[0.32em]">
-                    {item.label}
-                  </div>
-                  <p className="text-xs text-white/70">{item.description}</p>
+                <div className="text-sm font-bold uppercase tracking-[-0.045em]">
+                  {item.label}
                 </div>
               </button>
             ))}
