@@ -22,11 +22,11 @@ const Logo3D = dynamic(() => import('@/components/Logo3D'), {
 
 const downloads = [
   {
-    label: 'Manual de Marca',
+    label: 'Acerca de',
     description: 'Lineamientos de identidad, paleta y usos correctos del logo.',
   },
   {
-    label: 'Assets Completos',
+    label: 'Redes Sociales',
     description: 'Pack con renders, texturas y tipografias listas para usar.',
   },
 ];
@@ -64,8 +64,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <button className="rounded-full bg-primary-white px-6 py-2 text-xs font-bold uppercase tracking-[0.28em] text-accent-red shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-[1.04] active:scale-[0.97]">
-              Descargar Manual de Marca
+            <button className="rounded-full bg-primary-white px-6 py-2 text-xs font-black uppercase tracking-[0.28em] text-accent-red shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-[1.04] active:scale-[0.97]">
+              Manual de Marca
             </button>
           </div>
         </main>
