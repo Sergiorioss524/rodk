@@ -1,9 +1,14 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Navbar() {
+type NavbarProps = {
+  menuTrigger?: ReactNode;
+};
+
+export default function Navbar({ menuTrigger }: NavbarProps) {
   return (
     <nav className="relative w-full bg-accent-red text-primary-white flex items-center justify-between px-8 py-4" style={{ height: '80px' }}>
       <div className="absolute bottom-0 left-8 right-8 border-b border-accent-gray/50"></div>
@@ -50,16 +55,18 @@ export default function Navbar() {
       </div>
 
       {/* Right Section - Hamburger Menu */}
-      <button
-        className="flex items-center cursor-pointer"
-        aria-label="Toggle menu"
-      >
-        <div className="flex flex-col gap-1.5">
-          <span className="block w-6 h-[2px] bg-primary-white"></span>
-          <span className="block w-6 h-[2px] bg-primary-white"></span>
-          <span className="block w-6 h-[2px] bg-primary-white"></span>
-        </div>
-      </button>
+      {menuTrigger ?? (
+        <button
+          className="flex items-center cursor-pointer"
+          aria-label="Toggle menu"
+        >
+          <div className="flex flex-col gap-1.5">
+            <span className="block w-6 h-[2px] bg-primary-white"></span>
+            <span className="block w-6 h-[2px] bg-primary-white"></span>
+            <span className="block w-6 h-[2px] bg-primary-white"></span>
+          </div>
+        </button>
+      )}
     </nav>
   );
 }

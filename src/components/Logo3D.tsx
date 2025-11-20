@@ -93,7 +93,7 @@ function LoadingFallback() {
 
 export default function Logo3D() {
   return (
-    <div className="w-[500px] h-[500px] md:w-[600px] md:h-[600px]">
+    <div className="w-[320px] h-[320px] md:w-[420px] md:h-[420px]">
       <Canvas
         camera={{ position: [0, 0, 4.5], fov: 55 }}
         style={{ background: 'transparent' }}
