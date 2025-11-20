@@ -38,7 +38,7 @@
       }
 
       .cls-6 {
-        stroke-width: .16px;
+        stroke-width: .5px;
       }
 
       .cls-6, .cls-7 {
@@ -48,7 +48,7 @@
       }
 
       .cls-7 {
-        stroke-width: .16px;
+        stroke-width: .5px;
       }
 
       .cls-8 {
